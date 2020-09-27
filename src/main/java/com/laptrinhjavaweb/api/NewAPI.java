@@ -1,20 +1,29 @@
 package com.laptrinhjavaweb.api;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.laptrinhjavaweb.dto.NewDTO;
 
-@Controller
+@RestController//@RestController: mặc định dữ liệu trả về là JSON
 public class NewAPI {
 	
-	  @PostMapping(value = "/new")
-	  @ResponseBody
+	   @PostMapping(value = "/new")
 	   public NewDTO createNew(@RequestBody NewDTO model) {
 	      return model;
+	   }
+	   
+	   @PutMapping(value = "/new")
+	   public NewDTO updateNew(@RequestBody NewDTO model) {
+	      return model;
+	   }
+	   
+	   @DeleteMapping(value = "/new")
+	   public boolean deleteNew(@RequestBody long[] ids) {
+	    
+		   return true;
 	   }
 }
