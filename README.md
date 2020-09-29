@@ -6,7 +6,7 @@
 
 # Database
 - Gồm các table: user, role, new, category, comment 
-- Table "user" và "role" quan hệ nhiều-nhiều
+( table "user" và "role" quan hệ n-n)
 
 # Sơ đồ quan hệ giữa các bảng trong MySQL
 <p align="center"><img src="database/erd.png"></p>
