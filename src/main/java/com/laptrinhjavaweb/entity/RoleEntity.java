@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "role")
 public class RoleEntity extends BaseEntity {
 	
-	@Column
+	@Column//Phải có @Column mới tạo cột trong DB
 	private String code;
 	
 	@Column
